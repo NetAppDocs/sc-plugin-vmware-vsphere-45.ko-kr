@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_migrate.html 
+keywords:  
+summary: SnapCenter Windows PowerShell cmdlet을 사용하여 SnapCenter Plug-in for VMware vSphere 메타데이터를 Windows 기반 SnapCenter 서버에서 Linux 기반 SnapCenter Plug-in for VMware vSphere 가상 어플라이언스로 마이그레이션할 수 있습니다. 
+---
+= 마이그레이션 옵션 및 지원되는 경로
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Windows PowerShell cmdlet을 사용하여 SnapCenter Plug-in for VMware vSphere 메타데이터를 Windows 기반 SnapCenter 서버에서 Linux 기반 SnapCenter Plug-in for VMware vSphere 가상 어플라이언스로 마이그레이션할 수 있습니다.
+
+
+
+== 마이그레이션 옵션
+
+마이그레이션 옵션에는 두 가지가 있습니다.
+
+* SnapCenter에서 마이그레이션 중입니다
++
+Windows 기반 SnapCenter에서 다음에 대한 메타데이터를 마이그레이션해야 합니다.
+
++
+** 플러그인이 SnapCenter의 Windows 기반 구성 요소로 실행 중일 때 VMware vSphere용 SnapCenter 플러그인에서 수행하는 VM 정합성 보장 백업입니다.
+** 플러그인을 SnapCenter의 Windows 기반 구성 요소로 실행 중일 때 SnapCenter 애플리케이션 기반 플러그인에서 VMware vSphere용 SnapCenter 플러그인을 지원하여 가상화된 데이터베이스 또는 파일 시스템의 애플리케이션 정합성이 보장되는 데이터 보호 메타데이터를 수행합니다.
++
+마이그레이션하려면 Windows SnapCenter PowerShell cmdlet 'invoke-SCVVAMigration'을 사용합니다
+
++
+메타데이터는 SnapCenter 4.0 이상에서만 마이그레이션할 수 있습니다.
+
+
+
+* VSC에서 마이그레이션
++
+SnapCenter와 통합되지 않은 백업 작업에 대해 VSC 6.2.x(SMVI) 메타데이터를 마이그레이션할 수 있습니다.
+
++
+마이그레이션하려면 NetApp ToolChest: SnapCenter 및 가상 스토리지 콘솔용 NetApp 가져오기 유틸리티를 사용합니다. VSC-SnapCenter 마이그레이션 옵션을 선택해야 합니다.
+
++
+기존 백업의 메타데이터만 마이그레이션할 수 있습니다. 예를 들어 기존 백업이 없는 경우 정책만 마이그레이션할 수 없습니다.
+
+
+
+
+
+== 지원되는 마이그레이션 경로
+
+를 참조하십시오 link:scpivs44_release_notes.html["VMware vSphere용 SnapCenter 플러그인 릴리즈 노트"^] 지원되는 업그레이드 및 마이그레이션 경로에 대한 자세한 내용은 를 참조하십시오.

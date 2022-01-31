@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_migrate_snapcenter_backup_metadata_to_the_virtual_appliance.html 
+keywords:  
+summary: SnapCenter Windows PowerShell cmdlet을 사용하여 가상화된 데이터 백업 메타데이터에 대해 SnapCenter VM 정합성이 보장되는 백업 메타데이터 및 SnapCenter 애플리케이션 정합성을 VMware vSphere 가상 어플라이언스인 SnapCenter 플러그인으로 마이그레이션할 수 있습니다. 
+---
+= Windows 기반 SnapCenter VMware 백업 메타데이터를 마이그레이션합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Windows PowerShell cmdlet을 사용하여 가상화된 데이터 백업 메타데이터에 대해 SnapCenter VM 정합성이 보장되는 백업 메타데이터 및 SnapCenter 애플리케이션 정합성을 VMware vSphere 가상 어플라이언스인 SnapCenter 플러그인으로 마이그레이션할 수 있습니다.
+
+.단계
+. MySQL 데이터베이스를 백업한 다음 해당 백업을 다른 위치로 복사 및 이동하여 보존 정책으로 인해 해당 백업이 삭제되지 않도록 합니다.
++
+link:scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html["VMware vSphere MySQL 데이터베이스용 SnapCenter 플러그인을 백업합니다"]
+
+. VMware vSphere 웹 클라이언트에 로그온하여 실행 중인 작업이 없는지 확인합니다.
+. SnapCenter 관리자 사용자 이름을 사용하여 SnapCenter GUI에 로그온합니다.
++
+다른 사용자 이름을 사용하여 로그인하지 마십시오. 이 사용자 이름에 모든 권한이 있더라도 마이그레이션 오류가 발생할 수 있습니다.
+
+. Windows SnapCenter GUI 왼쪽 탐색 창에서 * 설정 * 을 클릭한 다음 * 자격 증명 * 탭을 클릭하고 * 추가 * 를 클릭하여 가상 어플라이언스에 대한 자격 증명을 추가합니다.
+. 'invoke-SCVOVAMigration' cmdlet에서 사용할 Run as 자격 증명의 이름을 만듭니다.
++
+
+NOTE: 인증 필드에 Linux를 선택해야 합니다.
+
++
+이 단계에서는 SnapCenter 서버가 마이그레이션 중에 가상 어플라이언스에 액세스하는 데 사용하는 자격 증명을 추가합니다.
+
+. Windows PowerShell 창을 열고 다음 cmdlet을 실행합니다.
++
+오픈 스매커넥션
+
++
+'invoke-SCVVAMigration-SourceCVHost<old-SCV-host-IP>-DestinationSCVOVAHost<new-appliance-IP>-OVACredential<appliance-credentials>-ByPassValidationCheck-Overwrite-ContinueMigationOnStorageError-ScheduleOffsetTime<Time-offset>'을 호출합니다
+
++
+마이그레이션 워크플로우에 대한 개요는 을 참조하십시오 link:scpivs44_migration_overview.html#migration_workflow["마이그레이션 워크플로우"]
+
+
+
+
+IMPORTANT: 옵션인 '-Overwrite' 매개 변수를 사용하면 대규모 환경에서 보다 빠르게 마이그레이션할 수 있습니다. 이 매개 변수는 SnapCenter Plug-in for VMware vSphere 호스트의 MySQL 데이터베이스에 있는 데이터를 덮어씁니다. '-Overwrite' 파라미터를 두 번 이상 사용하지 마십시오. 마이그레이션이 부분 마이그레이션인 경우 '-Overwrite' 매개 변수를 다시 사용하면 기존의 마이그레이션된 데이터를 덮어쓸 수 있습니다. '-Overwrite' 매개 변수를 사용하지 않고 'invoke-SCVVAMigration'을 두 번 이상 실행하면 이전에 마이그레이션한 데이터가 복제됩니다.
+
+
+NOTE: 소스 SnapCenter 호스트와 대상 SnapCenter VMware 가상 어플라이언스 호스트가 서로 다른 시간대에 있는 경우 ScheduleOffsetTime 매개 변수를 사용합니다. 이 값은 양의 시간 또는 음의 시간 오프셋으로 예약 백업 실행 시간을 조정할 수 있습니다. 시간 차이를 hh:mm:ss 형식으로 지정합니다. 예를 들어, 음수 값은 06:00:00 또는 -06:00:00 형식으로 지정합니다.
