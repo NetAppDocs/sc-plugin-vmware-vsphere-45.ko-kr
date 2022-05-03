@@ -6,6 +6,7 @@ summary: 백업 메타데이터를 VMware vSphere용 SnapCenter 플러그인으�
 ---
 = 마이그레이션 후
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

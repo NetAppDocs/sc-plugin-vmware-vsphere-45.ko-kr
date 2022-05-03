@@ -6,6 +6,7 @@ summary: SnapCenter Windows PowerShell cmdlet을 사용하여 가상화된 데�
 ---
 = Windows 기반 SnapCenter VMware 백업 메타데이터를 마이그레이션합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: SnapCenter Plug-in for VMware vSphere 관리 GUI를 사용하여 vCente
 ---
 = 구성을 관리합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

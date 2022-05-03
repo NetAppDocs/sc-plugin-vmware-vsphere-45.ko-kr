@@ -6,6 +6,7 @@ summary: SnapCenter Plug-in for VMware vSphere에서 제공하는 새로운 기�
 ---
 = NetApp Data Broker에서 업그레이드
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

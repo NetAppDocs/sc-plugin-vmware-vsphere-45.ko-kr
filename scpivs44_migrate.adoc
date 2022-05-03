@@ -6,6 +6,7 @@ summary: SnapCenter Windows PowerShell cmdlet을 사용하여 SnapCenter Plug-in
 ---
 = 마이그레이션 옵션 및 지원되는 경로
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

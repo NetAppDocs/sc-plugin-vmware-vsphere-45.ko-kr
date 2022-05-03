@@ -6,6 +6,7 @@ summary: 마이그레이션 명령은 SnapCenter 4.0 이상에서만 메타데�
 ---
 = 마이그레이션 개요
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

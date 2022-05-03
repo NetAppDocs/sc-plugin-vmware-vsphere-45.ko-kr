@@ -6,6 +6,7 @@ summary: 'VMware vSphere용 SnapCenter 플러그인에 파일 또는 기타 콘�
 ---
 = 마이그레이션 중에 "잘못된 게이트웨이" 오류를 수정합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
