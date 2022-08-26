@@ -16,7 +16,7 @@ settings:
   - name: VMware vSphere용 SnapCenter 플러그인
     url: "/sc-plugin-vmware-vsphere-46"
     version-number: '4.6'
-  langs: ko-kr,us-en,ja-jp,zh-cn,zh-tw
+  langs: ko-kr,us-en,ja-jp,zh-cn,zh-tw,fr-fr,de-de
 sidebar:
   entries:
   - title: VMware vSphere 4.5 docs용 SnapCenter 플러그인
