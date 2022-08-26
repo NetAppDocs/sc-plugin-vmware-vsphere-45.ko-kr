@@ -18,7 +18,7 @@ summary: 'VMware vSphere용 SnapCenter 플러그인에 파일 또는 기타 콘�
 
 
 
-=== 시나리오 1
+== 시나리오 1
 
 파일 또는 기타 컨텐츠를 VMware vSphere용 SnapCenter 플러그인에 수동으로 추가한 후 마이그레이션을 시도했습니다. 이 시나리오에서는 마이그레이션 프로세스에 필요한 공간이 어플라이언스에 충분하지 않습니다.
 
@@ -26,7 +26,7 @@ summary: 'VMware vSphere용 SnapCenter 플러그인에 파일 또는 기타 콘�
 
 
 
-=== 시나리오 2
+== 시나리오 2
 
 VMware vSphere 연결을 위한 SnapCenter 플러그인이 중지되었거나 마이그레이션 중에 서비스가 중지되었습니다.
 
