@@ -22,6 +22,7 @@ SnapCenter Plug-in for VMware vSphere에서 제공하는 새로운 기능을 사
 * 모범 사례는 업그레이드 전에 NetApp 데이터 브로커가 포함된 VM을 백업하는 것입니다.
 
 
+.이 작업에 대해
 다음과 같은 세 가지 기본 업그레이드 단계가 있습니다.
 
 . 업그레이드를 준비합니다.
@@ -89,6 +90,7 @@ Datastores 열에서 .iso 파일을 업로드한 데이터 저장소를 선택�
 
 
 
+.작업을 마친 후
 시스템에 "upgrade successful(업그레이드 성공)" 메시지가 표시되면 시스템에서 서비스 시작을 시도합니다.
 
 . "계속하려면 Enter 키를 누르십시오." 메시지가 표시될 때까지 기다린 다음 VMware vSphere 관리 GUI용 SnapCenter 플러그인에 로그인합니다.
